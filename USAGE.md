@@ -15,9 +15,13 @@ Add or Edit or Delete titles and airtimes for auto downloads
 
 Make sure the title is exact or follows [Tasker Matching Rules](https://tasker.joaoapps.com/userguide/en/matching.html)
 
+### Retry Download
+
+Retries a previously found pack, or re-enables a disabled download 
+
 ### Disable Download
 
-Completely Disables an auto download for the day. Cannot be re-enabled. Useful for delayed or cancelled episodes
+Disables an auto download for the day. Can be re-enabled. Useful for delayed or cancelled episodes
 
 # Search for shows
 
