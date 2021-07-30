@@ -21,38 +21,48 @@ Completely Disables an auto download for the day. Cannot be re-enabled. Useful f
 
 # Search for shows
 
-Searches for shows from [NIBL](https://nibl.co.uk)
+Manual search for shows from [NIBL](https://nibl.co.uk)
 
 Can occasionally have problems with multiple bots
+
+# Batch Download
+
+Download from either ARUTHA-BATCH or your chosen bot, in your chosen quality
+
+Choose either a range of episodes i.e. 1-100 or a list of shows like 1,3,5..etc
+
+List almost every show available on [SubsPlease Packlist](https://subsplease.org/xdcc/) (over 1400!)
 
 # Options
 
 ### Quality
 
-Sets auto download quality: SD (540p or 480p), 720p, 1080p
+|SD|720p|1080p|
+|:-:|:-:|:-:|
+|~300MB|~700MB|~1.2GB|
 
-Default: 720p
+Default: `720p`
 
 ### Directory
 
-Set directory to download to
+Set download directory
 
-Default: /storage/emulated/0/Download/
+Default: `/storage/emulated/0/Download/`
 
 ### Wifi Only
 
-Only auto downloads when on wifi
+Auto download on wifi only
 
-Default: false
+Default: `false`
 
 ### Choose Bot
 
 Choose bot used to auto download
 
-Default: CR-HOLLAND|NEW
+Default: `CR-HOLLAND|NEW`
 
 ### Disable/Enable Auto Downloads
 
-Disables persistent notification and auto downloads
+Permanent notification and auto downloads
 
-default: Enabled
+Default: `Enabled`
