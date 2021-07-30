@@ -11,15 +11,11 @@ Best way to set auto downloads
 
 Setup with correct title and best guess of the airtime
 
-Grabs schedule based on last 60 episodes released on [Telegram channel](https://t.me/s/SubsPlease1080p)
-
 ### Add/Edit Shows
 
-Can change the title (not recommended) and time for auto downloads
+Can change the title and time for auto downloads or add new title and time (not recommended)
 
-Also can add new entries to auto download. (Make sure the title is an EXACT MATCH) see [SubsPlease Schedule](https://subsplease.org/schedule) for reference.
-
-Adding shows is only useful for shows that haven't aired their first episode yet
+Make sure the title is an EXACT MATCH see [SubsPlease Schedule](https://subsplease.org/schedule) for reference.
 
 ### Disable Download
 
