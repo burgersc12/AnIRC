@@ -23,12 +23,6 @@ Completely Disables an auto download for the day. Cannot be re-enabled. Useful f
 
 Searches for shows from [NIBL](https://nibl.co.uk)
 
-**WARNING**
-
-Try to keep it to a single bot, I have no idea what would happen if you download from two bots at once.
-
-It could be fine, just break the progress notification, or break your entire filesystem IDK
-
 # Options
 
 ### Quality
