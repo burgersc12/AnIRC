@@ -4,13 +4,14 @@ HOW TO USE EACH SECTION OF THE APP
 
 Auto download anime from [SubsPlease Packlist](https://subsplease.org/xdcc)
 
-## Setup Daily Schedule
+
+### Setup Daily Schedule
 
 Grabs schedule based on last 60 episodes released on [Telegram channel](https://t.me/s/SubsPlease1080p)
 
 Sets your auto download schedule from with correct title and best guess of the airtime
 
-## Add/Edit Shows
+### Add/Edit Shows
 
 Can change the title (not recommended) and time for auto downloads
 
@@ -18,7 +19,7 @@ Also can add new entries to auto download. (Make sure the title is an EXACT MATC
 
 Adding shows is only useful for shows that haven't aired their first episode yet
 
-## Disable Download
+### Disable Download
 
 Completely Disables an auto download for the day. Cannot be re-enabled
 
@@ -34,31 +35,31 @@ It could be fine, just break the progress notification, or break your entire fil
 
 # Options
 
-## Quality
+### Quality
 
 Sets auto download quality: SD (540p or 480p), 720p, 1080p
 
 Default: 720p
 
-## Directory
+### Directory
 
 Set directory to download to
 
 Default: /storage/emulated/0/Download/
 
-## Wifi Only
+### Wifi Only
 
 Only auto downloads when on wifi
 
 Default: false
 
-## Choose Bot
+### Choose Bot
 
 Choose bot used to auto download
 
 Default: CR-HOLLAND|NEW
 
-## Disable/Enable Auto Downloads
+### Disable/Enable Auto Downloads
 
 Disables persistent notification and auto downloads
 
