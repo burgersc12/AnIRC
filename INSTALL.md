@@ -14,6 +14,8 @@ pkg update && pkg install -y python && pip install xdcc-dl && mkdir -p ~/.termux
 echo -e '#!/usr/bin/bash\ncd $3\nxdcc-dl "/msg $1 xdcc send #$2" | tee -a .stdout.txt' > ~/.termux/tasker/xdcc-dl.sh && sed -i 's/columns = 80/columns = 1000/g' ~/../usr/lib/python3.9/site-packages/xdcc_dl/xdcc/XDCCClient.py
 ```
 
+**Tap Command To Show Copy Button**
+
 ### App Permissions to Allow
 
 `Storage`
