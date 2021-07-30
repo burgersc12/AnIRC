@@ -16,7 +16,7 @@ echo -e '#!/usr/bin/bash\ncd $3\nxdcc-dl "/msg $1 xdcc send #$2" | tee -a .stdou
 
 **Tap Command To Show Copy Button**
 
-### App Permissions to Allow
+## App Permissions to Allow
 
 `Storage`
 
