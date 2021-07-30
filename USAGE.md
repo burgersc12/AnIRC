@@ -7,6 +7,8 @@ Auto download anime from [SubsPlease Packlist](https://subsplease.org/xdcc)
 
 ### Setup Daily Schedule
 
+Best way to set auto downloads
+
 Sets your auto download schedule with correct title and best guess of the airtime
 
 Grabs schedule based on last 60 episodes released on [Telegram channel](https://t.me/s/SubsPlease1080p)
