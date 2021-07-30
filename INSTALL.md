@@ -4,6 +4,8 @@ Install [Termux](https://f-droid.org/en/packages/com.termux/) and [Termux:Tasker
 
 ### Commands to run in Termux
 
+**NOTE** The first command is not needed if you had SubsDCC installed and haven't deleted Termux
+
 ```
 pkg update && pkg install -y python && pip install xdcc-dl && mkdir -p ~/.termux/tasker/ ; termux-setup-storage
 ```
