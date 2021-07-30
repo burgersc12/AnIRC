@@ -57,7 +57,7 @@ Default: `/storage/emulated/0/Download/`
 
 Auto download on wifi only
 
-Default: `false`
+Default: `true`
 
 ### Choose Bot
 
