@@ -13,7 +13,7 @@ Sets auto downloads schedule. Gets an airtime estimate and an exact title
 
 Add or Edit or Delete titles and airtimes for auto downloads
 
-Make sure the title is an **EXACT MATCH**. See [SubsPlease Schedule](https://subsplease.org/schedule) for reference.
+Make sure the title is exact or follows [Tasker Matching Rules](https://tasker.joaoapps.com/userguide/en/matching.html)
 
 ### Disable Download
 
