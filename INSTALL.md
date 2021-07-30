@@ -4,11 +4,11 @@ Install [Termux](https://f-droid.org/en/packages/com.termux/) and [Termux:Tasker
 
 ## Permissions to Allow
 
-Storage
+`Storage`
 
-Run commands in Termux environment
+`Run commands in Termux environment`
 
-Draw over other apps
+`Draw over other apps`
 
 ## Commands to run in Termux
 
