@@ -7,19 +7,17 @@ Auto download anime from [SubsPlease Packlist](https://subsplease.org/xdcc)
 
 ### Setup Daily Schedule
 
-Sets auto downloads schedule
+Sets auto downloads schedule. Gets an airtime estimate and an exact title
 
-Setup with correct title and best guess of the airtime
+### Edit Shows
 
-### Add/Edit Shows
+Add or Edit or Delete titles and airtimes for auto downloads
 
-Can change the title and time for auto downloads or add new title and time (not recommended)
-
-Make sure the title is an EXACT MATCH see [SubsPlease Schedule](https://subsplease.org/schedule) for reference.
+Make sure the title is an **EXACT MATCH**. See [SubsPlease Schedule](https://subsplease.org/schedule) for reference.
 
 ### Disable Download
 
-Completely Disables an auto download for the day. Cannot be re-enabled
+Completely Disables an auto download for the day. Cannot be re-enabled. Useful for delayed or cancelled episodes
 
 # Search for shows
 
