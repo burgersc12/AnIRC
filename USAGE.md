@@ -23,6 +23,8 @@ Completely Disables an auto download for the day. Cannot be re-enabled. Useful f
 
 Searches for shows from [NIBL](https://nibl.co.uk)
 
+Can occasionally have problems with multiple bots
+
 # Options
 
 ### Quality
