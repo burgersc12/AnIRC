@@ -2,11 +2,11 @@
 
 Install [Termux](https://f-droid.org/en/packages/com.termux/) and [Termux:Tasker](https://f-droid.org/en/packages/com.termux.tasker/)
 
-## Permissions to Allow
+## App Permissions to Allow
 
 `Storage`
 
-`Run commands in Termux environment`
+`Additional permissions >> Run commands in Termux environment`
 
 `Draw over other apps`
 
