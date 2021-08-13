@@ -4,16 +4,11 @@ HOW TO USE EACH SECTION OF THE APP
 
 Auto download anime from [SubsPlease Packlist](https://subsplease.org/xdcc)
 
+Shows schedule table for the week and today
 
 ### Setup Daily Schedule
 
-Sets auto downloads schedule. Gets an airtime estimate and an exact title
-
-### Edit Shows
-
-Add or Edit or Delete titles and airtimes for auto downloads
-
-Make sure the title is exact or follows [Tasker Matching Rules](https://tasker.joaoapps.com/userguide/en/matching.html)
+Sets auto downloads schedule, grabs from [SubsPlease schedule](https://subsplease.org/schedule)
 
 ### Retry Download
 
