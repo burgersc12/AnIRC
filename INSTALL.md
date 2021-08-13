@@ -20,6 +20,8 @@ echo -e '#!/usr/bin/bash\ncd $3\nxdcc-dl "/msg $1 xdcc send #$2" | tee -a .stdou
 
 `Storage`
 
-`Additional permissions >> Run commands in Termux environment`
+`Run commands in Termux environment`
 
 `Draw over other apps`
+
+**NOTE** .apk file can be found under `Releases`
