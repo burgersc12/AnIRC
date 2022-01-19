@@ -22,4 +22,6 @@ echo -e '#!/usr/bin/bash\ncd $3\nxdcc-dl "/msg $1 xdcc send #$2" | tee -a .stdou
 
 `Draw over other apps`
 
-**NOTE** .apk file can be found under [Releases](https://github.com/burgersc12/AnIRC/releases)
+**NOTE**
+
+.apk file can be found under [Releases](https://github.com/burgersc12/AnIRC/releases)
