@@ -5,5 +5,3 @@
 [How to use app](USAGE.md)
 
 [Updating xdcc-dl](UPDATING.md)
-
-[Discord Server](https://discord.gg/JSFn3vjDKc)
