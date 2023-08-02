@@ -9,7 +9,7 @@ AnimeXD - Auto Download Anime
 
 [Termux:Tasker](https://www.f-droid.org/packages/com.termux.tasker/)
 
-## Step 2: Paste these into Termux
+## Step 2: Paste this into Termux
 
 after install (hit y and enter if prompted about package versions)
 
