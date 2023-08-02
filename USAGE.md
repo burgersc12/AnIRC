@@ -17,7 +17,7 @@ Default: `720p`
 
 Set download directory
 
-Default: `/storage/emulated/0/Download/`
+Default: `/storage/emulated/0/xdcc/`
 
 ### Choose Bot
 
