@@ -1,34 +1,5 @@
-HOW TO USE EACH SECTION OF THE APP
-
-# Scheduled Downloads
-
-Auto download anime from [SubsPlease Packlist](https://subsplease.org/xdcc)
-
-Shows schedule table for the week and today
-
-### Setup Daily Schedule
-
-Sets auto downloads schedule, grabs from [SubsPlease schedule](https://subsplease.org/schedule)
-
-### Retry Download
-
-Retries a previously found pack, or re-enables a disabled download 
-
-### Disable Download
-
-Disables an auto download for the day. Can be re-enabled. Useful for delayed or cancelled episodes
-
-# Search for shows
-
-Manual search for shows from [NIBL](https://nibl.co.uk)
-
-Can occasionally have problems with multiple bots
-
-# Batch Download
-
-Download from either ARUTHA-BATCH or your chosen bot, in your chosen quality
-
-Choose either a range of episodes i.e. 1-100 or a list of shows like 1,3,5..etc
+# Batch/Bot Download
+Download from either ARUTHA-BATCH or your chosen bot.
 
 List almost every show available on [SubsPlease Packlist](https://subsplease.org/xdcc/) (over 1400!)
 
@@ -48,20 +19,8 @@ Set download directory
 
 Default: `/storage/emulated/0/Download/`
 
-### Wifi Only
-
-Auto download on wifi only
-
-Default: `true`
-
 ### Choose Bot
 
 Choose bot used to auto download
 
 Default: `CR-HOLLAND|NEW`
-
-### Disable/Enable Auto Downloads
-
-Permanent notification and auto downloads
-
-Default: `Enabled`
