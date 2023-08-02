@@ -24,3 +24,10 @@ Default: `/storage/emulated/0/xdcc/`
 Choose bot used to auto download
 
 Default: `CR-HOLLAND|NEW`
+
+### Update Rates
+
+Choose how long between .txt file
+ download (takes a while to parse sometimes)
+ 
+Default: `12 hours` and `0.5 hours`
