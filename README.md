@@ -15,12 +15,12 @@ termux-setup-storage; pkg upgrade -y && pkg install -y rust binutils python && p
 ```
 Make sure to allow files permissions. Hit y and enter if prompted about package versions, this will download the latest version of each package.
 
-# Batch/Bot Download
+# Batch/Bot Download Info
 Download from either ARUTHA-BATCH (has older shows but takes a long time to load) or your chosen bot (has newest episodes as well as some older ones).
 
-List almost every show available on [SubsPlease Packlist](https://subsplease.org/xdcc/) (over 1400!)
+List almost every show available on [SubsPlease Packlist](https://subsplease.org/xdcc/)
 
-## Options
+# Settings
 
 ### Quality
 
