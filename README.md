@@ -16,7 +16,7 @@ termux-setup-storage; pkg upgrade -y && pkg install -y rust binutils python && p
 Make sure to allow files permissions. Hit y and enter if prompted about package versions, this will download the latest version of each package.
 
 # Batch/Bot Download Info
-Download from either ARUTHA-BATCH, which has older shows but takes a long time to load.
+Download from either ARUTHA-BATCH, which has older shows but takes a long time to load, or default bot.
 
 Lists almost every show available on [SubsPlease Packlist](https://subsplease.org/xdcc/)
 
