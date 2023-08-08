@@ -16,9 +16,9 @@ termux-setup-storage; pkg upgrade -y && pkg install -y rust binutils python && p
 Make sure to allow files permissions. Hit y and enter if prompted about package versions, this will download the latest version of each package.
 
 # Batch/Bot Download Info
-Download from either ARUTHA-BATCH (has older shows but takes a long time to load) or your chosen bot (has newest episodes as well as some older ones).
+Download from either ARUTHA-BATCH, which has older shows but takes a long time to load.
 
-List almost every show available on [SubsPlease Packlist](https://subsplease.org/xdcc/)
+Lists almost every show available on [SubsPlease Packlist](https://subsplease.org/xdcc/)
 
 # Settings
 
@@ -26,7 +26,7 @@ List almost every show available on [SubsPlease Packlist](https://subsplease.org
 
 |SD|720p|1080p|
 |:-:|:-:|:-:|
-|~300MB|~700MB|~1.2GB|
+|~400MB|~700MB|~1.4GB|
 
 Default: `1080p`
 
@@ -44,6 +44,6 @@ Default: `CR-HOLLAND|NEW`
 
 ### Update Rates
 
-Choose how long between downloading bot/batch `.txt` files
+Choose how long between downloading batch and bot `.txt` files
  
 Default: `12 hours` and `0.5 hours`
