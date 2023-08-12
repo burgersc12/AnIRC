@@ -1,15 +1,14 @@
 <TaskerData sr="" dvi="1" tv="6.2.12-rc">
 	<Profile sr="prof39" ve="2">
 		<cdate>1690948519369</cdate>
-		<clp>true</clp>
-		<edate>1691772783676</edate>
+		<edate>1691867442230</edate>
 		<flags>8</flags>
 		<id>39</id>
 		<limit>true</limit>
 		<mid0>26</mid0>
 		<nme>Check New Episodes</nme>
 		<Time sr="con0">
-			<fromvar>%AnimeTime(1)</fromvar>
+			<fromvar>%AnimeTime1</fromvar>
 			<rep>2</rep>
 			<repval>3</repval>
 			<th>-1</th>
@@ -18,6 +17,7 @@
 	</Profile>
 	<Profile sr="prof41" ve="2">
 		<cdate>1690948519371</cdate>
+		<clp>true</clp>
 		<edate>1691772791621</edate>
 		<flags>8</flags>
 		<id>41</id>
@@ -52,13 +52,13 @@
 		<cdate>1683636095663</cdate>
 		<name>AnimeXD</name>
 		<pids>39,41,42</pids>
-		<tids>22,18,34,27,33,24,37,35,26,2</tids>
+		<tids>35,24,22,37,26,34,18,27,2,33</tids>
 		<Kid sr="Kid">
 			<launchID>2</launchID>
 			<pkg>com.burgersc12.animexd</pkg>
 			<vTarg>29</vTarg>
-			<vnme>2.0.3</vnme>
-			<vnum>22</vnum>
+			<vnme>2.0.4</vnme>
+			<vnum>25</vnum>
 		</Kid>
 		<Share sr="Share">
 			<b>false</b>
@@ -83,7 +83,7 @@ termux-setup-storage; pkg upgrade -y &amp;&amp; pkg install -y rust binutils pyt
 			<t></t>
 		</Share>
 		<Img sr="icon" ve="2">
-			<nme>mw_file_cloud_download</nme>
+			<fle>/storage/emulated/0/xdcc/skies.png</fle>
 		</Img>
 		<ProfileVariable sr="pv0">
 			<clearout>false</clearout>
@@ -412,7 +412,7 @@ termux-setup-storage; pkg upgrade -y &amp;&amp; pkg install -y rust binutils pyt
 	</Task>
 	<Task sr="task2">
 		<cdate>1690486308176</cdate>
-		<edate>1691653930818</edate>
+		<edate>1691827251797</edate>
 		<id>2</id>
 		<nme>Launch Task</nme>
 		<pri>100</pri>
@@ -1710,7 +1710,7 @@ CR-NL.NEW.xdcc.txt
 	</Task>
 	<Task sr="task26">
 		<cdate>1690442242655</cdate>
-		<edate>1691772783676</edate>
+		<edate>1691867442230</edate>
 		<id>26</id>
 		<nme>RSS Check - XDCC Download</nme>
 		<pri>100</pri>
