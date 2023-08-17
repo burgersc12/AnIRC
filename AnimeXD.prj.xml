@@ -1,8 +1,8 @@
-<TaskerData sr="" dvi="1" tv="6.2.12-rc">
+<TaskerData sr="" dvi="1" tv="6.2.13-rc">
 	<Profile sr="prof39" ve="2">
 		<cdate>1690948519369</cdate>
 		<clp>true</clp>
-		<edate>1691911489280</edate>
+		<edate>1692252483493</edate>
 		<flags>8</flags>
 		<id>39</id>
 		<limit>true</limit>
@@ -53,13 +53,13 @@
 		<cdate>1683636095663</cdate>
 		<name>AnimeXD</name>
 		<pids>39,42,41</pids>
-		<tids>37,26,33,27,34,24,18,22,2,35</tids>
+		<tids>27,18,26,33,37,24,34,35,22,2</tids>
 		<Kid sr="Kid">
 			<launchID>2</launchID>
 			<pkg>com.burgersc12.animexd</pkg>
 			<vTarg>29</vTarg>
-			<vnme>2.0.5</vnme>
-			<vnum>28</vnum>
+			<vnme>2.1</vnme>
+			<vnum>30</vnum>
 		</Kid>
 		<Share sr="Share">
 			<b>false</b>
@@ -134,8 +134,8 @@ termux-setup-storage; pkg upgrade -y &amp;&amp; pkg install -y rust binutils pyt
 			<pvdn></pvdn>
 			<pvid>2</pvid>
 			<pvit>pj</pvit>
-			<pvn>%batch_update</pvn>
-			<pvt>n</pvt>
+			<pvn>%directory</pvn>
+			<pvt>t</pvt>
 			<strout>true</strout>
 		</ProfileVariable>
 		<ProfileVariable sr="pv4">
@@ -147,7 +147,7 @@ termux-setup-storage; pkg upgrade -y &amp;&amp; pkg install -y rust binutils pyt
 			<pvdn></pvdn>
 			<pvid>2</pvid>
 			<pvit>pj</pvit>
-			<pvn>%bot_update</pvn>
+			<pvn>%next_batch</pvn>
 			<pvt>n</pvt>
 			<strout>true</strout>
 		</ProfileVariable>
@@ -160,14 +160,14 @@ termux-setup-storage; pkg upgrade -y &amp;&amp; pkg install -y rust binutils pyt
 			<pvdn></pvdn>
 			<pvid>2</pvid>
 			<pvit>pj</pvit>
-			<pvn>%directory</pvn>
-			<pvt>t</pvt>
+			<pvn>%next_bot</pvn>
+			<pvt>n</pvt>
 			<strout>true</strout>
 		</ProfileVariable>
 	</Project>
 	<Task sr="task18">
 		<cdate>1690442002901</cdate>
-		<edate>1692073249214</edate>
+		<edate>1692256730214</edate>
 		<id>18</id>
 		<nme>Add Automated</nme>
 		<pri>100</pri>
@@ -413,7 +413,7 @@ termux-setup-storage; pkg upgrade -y &amp;&amp; pkg install -y rust binutils pyt
 	</Task>
 	<Task sr="task2">
 		<cdate>1690486308176</cdate>
-		<edate>1692075078051</edate>
+		<edate>1692256745839</edate>
 		<id>2</id>
 		<nme>Launch Task</nme>
 		<pri>100</pri>
@@ -436,15 +436,11 @@ This command must be run in Termux before downloading can be done! Termux:Tasker
 			<Str sr="arg1" ve="3">%quality
 %bot
 %file
-%bot_update
-%batch_update
 %directory</Str>
 			<Str sr="arg2" ve="3"/>
 			<Str sr="arg3" ve="3">1080p
 CR-HOLLAND|NEW
 CR-NL.NEW.xdcc.txt
-0.5
-12
 /storage/emulated/0/xdcc</Str>
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="0"/>
@@ -501,14 +497,10 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act6" ve="7">
-			<code>300</code>
-			<label>i think this anchor fixes running notif getting stuck so do not delete!</label>
-		</Action>
 	</Task>
 	<Task sr="task22">
 		<cdate>1690390743644</cdate>
-		<edate>1692075141941</edate>
+		<edate>1692256630985</edate>
 		<id>22</id>
 		<nme>List Wrapper</nme>
 		<pri>100</pri>
@@ -546,32 +538,20 @@ CR-NL.NEW.xdcc.txt
 			</ConditionList>
 		</Action>
 		<Action sr="act10" ve="7">
-			<code>43</code>
+			<code>549</code>
+			<Str sr="arg0" ve="3">%next_bot/%next_batch</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected</lhs>
-					<op>2</op>
-					<rhs>bot update rate*</rhs>
+					<lhs>%prev</lhs>
+					<op>1</op>
+					<rhs>%quality</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
 		<Action sr="act11" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">SubsPlease Settings</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">bot_up</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act12" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -581,7 +561,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act13" ve="7">
+		<Action sr="act12" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%prev</Str>
 			<Str sr="arg1" ve="3">%bot</Str>
@@ -591,7 +571,7 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act14" ve="7">
+		<Action sr="act13" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">SubsPlease Settings</Str>
 			<Int sr="arg1">
@@ -607,85 +587,21 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act15" ve="7">
-			<code>37</code>
-			<coll>true</coll>
+		<Action sr="act14" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%next_bot</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%prev</lhs>
-					<op>3</op>
+					<op>1</op>
 					<rhs>%bot</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act16" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">Bot Update Packlist</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">refresh</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act17" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act18" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected</lhs>
-					<op>2</op>
-					<rhs>batch update rate*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act19" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">SubsPlease Settings</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">batch</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>378</code>
-			<se>false</se>
-			<Bundle sr="arg0">
-				<Vals sr="val"/>
-			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="1"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
-			<Str sr="arg13" ve="3"/>
-			<Str sr="arg2" ve="3">AnimeXD Settings</Str>
-			<Str sr="arg3" ve="3">Quality&lt;br&gt;&lt;b&gt;%quality,Bot&lt;br&gt;&lt;b&gt;%bot,Batch Update Rate&lt;br&gt;&lt;b&gt;%batch_update hrs,Bot Update Rate&lt;br&gt;&lt;b&gt;%bot_update hrs,Change Download Directory&lt;br&gt;&lt;b&gt;%directory,Reload Files</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3">Cancel</Str>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Int sr="arg9">
-				<var>1000</var>
-			</Int>
-		</Action>
-		<Action sr="act20" ve="7">
+		<Action sr="act15" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -695,7 +611,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act21" ve="7">
+		<Action sr="act16" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">SubsPlease Settings</Str>
 			<Int sr="arg1">
@@ -711,7 +627,7 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act22" ve="7">
+		<Action sr="act17" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -721,23 +637,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act23" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">Batch Update Packlist</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">refresh</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act24" ve="7">
+		<Action sr="act18" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Bot Update Packlist</Str>
 			<Int sr="arg1">
@@ -753,10 +653,36 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act25" ve="7">
+		<Action sr="act19" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">Batch Update Packlist</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1"/>
+			<Str sr="arg2" ve="3">refresh</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%quality</lhs>
+					<op>2</op>
+					<rhs>360p|480p|540p</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act20" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act26" ve="7">
+		<Action sr="act21" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -766,7 +692,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act27" ve="7">
+		<Action sr="act22" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">XDCC View Packlist</Str>
 			<Int sr="arg1">
@@ -782,7 +708,7 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act28" ve="7">
+		<Action sr="act23" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -792,7 +718,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act29" ve="7">
+		<Action sr="act24" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">XDCC View Packlist</Str>
 			<Int sr="arg1">
@@ -808,18 +734,7 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act3" ve="7">
-			<code>37</code>
-			<coll>true</coll>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected</lhs>
-					<op>2</op>
-					<rhs>quality*</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act30" ve="7">
+		<Action sr="act25" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -829,9 +744,9 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act31" ve="7">
+		<Action sr="act26" ve="7">
 			<code>37</code>
-			<coll>true</coll>
+			<coll>false</coll>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%AnimeCheck[title](#)</lhs>
@@ -840,7 +755,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act32" ve="7">
+		<Action sr="act27" ve="7">
 			<code>393</code>
 			<Bundle sr="arg0">
 				<Vals sr="val"/>
@@ -854,7 +769,7 @@ CR-NL.NEW.xdcc.txt
 			<Str sr="arg5" ve="3">%merged</Str>
 			<Str sr="arg6" ve="3">||</Str>
 		</Action>
-		<Action sr="act33" ve="7">
+		<Action sr="act28" ve="7">
 			<code>37</code>
 			<coll>false</coll>
 			<ConditionList sr="if">
@@ -865,25 +780,47 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act34" ve="7">
+		<Action sr="act29" ve="7">
 			<code>354</code>
 			<Str sr="arg0" ve="3">%list</Str>
 			<Str sr="arg1" ve="3">%merged||&lt;b&gt;&gt; View Current Queue||&lt;b&gt;&gt; Add Anime||&lt;b&gt;&gt; Clear All Anime</Str>
 			<Str sr="arg2" ve="3">||</Str>
 		</Action>
-		<Action sr="act35" ve="7">
+		<Action sr="act3" ve="7">
+			<code>378</code>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val"/>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="1"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg13" ve="3"/>
+			<Str sr="arg2" ve="3">AnimeXD Settings</Str>
+			<Str sr="arg3" ve="3">Quality&lt;br&gt;&lt;b&gt;SD,Bot&lt;br&gt;&lt;b&gt;%bot,Change Download Directory&lt;br&gt;&lt;b&gt;%directory,Reload Files</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3">Cancel</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9">
+				<var>1000</var>
+			</Int>
+		</Action>
+		<Action sr="act30" ve="7">
 			<code>43</code>
 		</Action>
-		<Action sr="act36" ve="7">
+		<Action sr="act31" ve="7">
 			<code>354</code>
 			<Str sr="arg0" ve="3">%list</Str>
 			<Str sr="arg1" ve="3">%merged||&lt;b&gt;&gt; Add Anime||&lt;b&gt;&gt; Clear All Anime</Str>
 			<Str sr="arg2" ve="3">||</Str>
 		</Action>
-		<Action sr="act37" ve="7">
+		<Action sr="act32" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act38" ve="7">
+		<Action sr="act33" ve="7">
 			<code>378</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -905,7 +842,7 @@ CR-NL.NEW.xdcc.txt
 				<var>1000</var>
 			</Int>
 		</Action>
-		<Action sr="act39" ve="7">
+		<Action sr="act34" ve="7">
 			<code>37</code>
 			<coll>false</coll>
 			<ConditionList sr="if">
@@ -916,17 +853,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act4" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%prev</Str>
-			<Str sr="arg1" ve="3">%quality</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act40" ve="7">
+		<Action sr="act35" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Add Automated</Str>
 			<Int sr="arg1">
@@ -942,7 +869,7 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act41" ve="7">
+		<Action sr="act36" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -952,7 +879,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act42" ve="7">
+		<Action sr="act37" ve="7">
 			<code>393</code>
 			<Bundle sr="arg0">
 				<Vals sr="val"/>
@@ -965,7 +892,7 @@ CR-NL.NEW.xdcc.txt
 			<Str sr="arg5" ve="3">%queue</Str>
 			<Str sr="arg6" ve="3"/>
 		</Action>
-		<Action sr="act43" ve="7">
+		<Action sr="act38" ve="7">
 			<code>378</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -987,7 +914,7 @@ CR-NL.NEW.xdcc.txt
 				<var>1000</var>
 			</Int>
 		</Action>
-		<Action sr="act44" ve="7">
+		<Action sr="act39" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -997,7 +924,10 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act45" ve="7">
+		<Action sr="act4" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act40" ve="7">
 			<code>390</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -1009,9 +939,9 @@ CR-NL.NEW.xdcc.txt
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="120"/>
 		</Action>
-		<Action sr="act46" ve="7">
+		<Action sr="act41" ve="7">
 			<code>37</code>
-			<coll>true</coll>
+			<coll>false</coll>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%input</lhs>
@@ -1020,7 +950,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act47" ve="7">
+		<Action sr="act42" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%AnimeCheck</Str>
 			<Str sr="arg1" ve="3">[]</Str>
@@ -1030,34 +960,18 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act48" ve="7">
+		<Action sr="act43" ve="7">
 			<code>357</code>
 			<Str sr="arg0" ve="3">%AnimeTitle</Str>
 		</Action>
-		<Action sr="act49" ve="7">
+		<Action sr="act44" ve="7">
 			<code>357</code>
 			<Str sr="arg0" ve="3">%AnimeTime</Str>
 		</Action>
-		<Action sr="act5" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">SubsPlease Settings</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">quality</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act50" ve="7">
+		<Action sr="act45" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act51" ve="7">
+		<Action sr="act46" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -1067,7 +981,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act52" ve="7">
+		<Action sr="act47" ve="7">
 			<code>390</code>
 			<Bundle sr="arg0">
 				<Vals sr="val"/>
@@ -1078,7 +992,7 @@ CR-NL.NEW.xdcc.txt
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="120"/>
 		</Action>
-		<Action sr="act53" ve="7">
+		<Action sr="act48" ve="7">
 			<code>37</code>
 			<coll>false</coll>
 			<ConditionList sr="if">
@@ -1095,7 +1009,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act54" ve="7">
+		<Action sr="act49" ve="7">
 			<code>598</code>
 			<Str sr="arg0" ve="3">%AnimeCheck</Str>
 			<Str sr="arg1" ve="3">\{"title":"%AnimeCheck[title](%ld_selected_index)","day":"%AnimeCheck[day](%ld_selected_index)","time":"%AnimeCheck[time](%ld_selected_index)"\},?</Str>
@@ -1106,7 +1020,29 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg6" val="1"/>
 			<Str sr="arg7" ve="3"/>
 		</Action>
-		<Action sr="act55" ve="7">
+		<Action sr="act5" ve="7">
+			<code>378</code>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val"/>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="1"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg13" ve="3"/>
+			<Str sr="arg2" ve="3">AnimeXD Settings</Str>
+			<Str sr="arg3" ve="3">Quality&lt;br&gt;&lt;b&gt;%quality,Bot&lt;br&gt;&lt;b&gt;%bot,Change Download Directory&lt;br&gt;&lt;b&gt;%directory,Reload Files</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3">Cancel</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9">
+				<var>1000</var>
+			</Int>
+		</Action>
+		<Action sr="act50" ve="7">
 			<code>548</code>
 			<Str sr="arg0" ve="3">Deleted %ld_selected</Str>
 			<Int sr="arg1" val="0"/>
@@ -1125,7 +1061,7 @@ CR-NL.NEW.xdcc.txt
 			<Str sr="arg8" ve="3"/>
 			<Int sr="arg9" val="1"/>
 		</Action>
-		<Action sr="act56" ve="7">
+		<Action sr="act51" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<bool0>And</bool0>
@@ -1141,7 +1077,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act57" ve="7">
+		<Action sr="act52" ve="7">
 			<code>598</code>
 			<Str sr="arg0" ve="3">%AnimeCheck</Str>
 			<Str sr="arg1" ve="3">,\{"title":"%AnimeCheck[title](%ld_selected_index)","day":"%AnimeCheck[day](%ld_selected_index)","time":"%AnimeCheck[time](%ld_selected_index)"\}</Str>
@@ -1152,7 +1088,7 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg6" val="1"/>
 			<Str sr="arg7" ve="3"/>
 		</Action>
-		<Action sr="act58" ve="7">
+		<Action sr="act53" ve="7">
 			<code>548</code>
 			<Str sr="arg0" ve="3">Deleted %ld_selected</Str>
 			<Int sr="arg1" val="0"/>
@@ -1171,27 +1107,16 @@ CR-NL.NEW.xdcc.txt
 			<Str sr="arg8" ve="3"/>
 			<Int sr="arg9" val="1"/>
 		</Action>
-		<Action sr="act59" ve="7">
+		<Action sr="act54" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act6" ve="7">
-			<code>37</code>
-			<coll>false</coll>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%prev</lhs>
-					<op>3</op>
-					<rhs>%quality</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act60" ve="7">
+		<Action sr="act55" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act61" ve="7">
+		<Action sr="act56" ve="7">
 			<code>43</code>
 		</Action>
-		<Action sr="act62" ve="7">
+		<Action sr="act57" ve="7">
 			<code>378</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -1213,7 +1138,7 @@ CR-NL.NEW.xdcc.txt
 				<var>1000</var>
 			</Int>
 		</Action>
-		<Action sr="act63" ve="7">
+		<Action sr="act58" ve="7">
 			<code>37</code>
 			<coll>false</coll>
 			<ConditionList sr="if">
@@ -1224,7 +1149,7 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act64" ve="7">
+		<Action sr="act59" ve="7">
 			<code>130</code>
 			<Str sr="arg0" ve="3">Add Automated</Str>
 			<Int sr="arg1">
@@ -1240,16 +1165,19 @@ CR-NL.NEW.xdcc.txt
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
 		</Action>
-		<Action sr="act65" ve="7">
+		<Action sr="act6" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act66" ve="7">
+		<Action sr="act60" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act67" ve="7">
+		<Action sr="act61" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act68" ve="7">
+		<Action sr="act62" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act63" ve="7">
 			<code>135</code>
 			<Int sr="arg0" val="0"/>
 			<Int sr="arg1" val="1"/>
@@ -1263,29 +1191,34 @@ CR-NL.NEW.xdcc.txt
 			</ConditionList>
 		</Action>
 		<Action sr="act7" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">Batch Update Packlist</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">refresh</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
+			<code>37</code>
+			<coll>false</coll>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected</lhs>
+					<op>2</op>
+					<rhs>quality*</rhs>
+				</Condition>
+			</ConditionList>
 		</Action>
 		<Action sr="act8" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%prev</Str>
+			<Str sr="arg1" ve="3">%quality</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act9" ve="7">
 			<code>130</code>
-			<Str sr="arg0" ve="3">Bot Update Packlist</Str>
+			<Str sr="arg0" ve="3">SubsPlease Settings</Str>
 			<Int sr="arg1">
 				<var>%priority</var>
 			</Int>
 			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">refresh</Str>
+			<Str sr="arg2" ve="3">quality</Str>
 			<Str sr="arg3" ve="3"/>
 			<Str sr="arg4" ve="3"/>
 			<Int sr="arg5" val="0"/>
@@ -1293,14 +1226,11 @@ CR-NL.NEW.xdcc.txt
 			<Str sr="arg7" ve="3"/>
 			<Int sr="arg8" val="0"/>
 			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act9" ve="7">
-			<code>38</code>
 		</Action>
 	</Task>
 	<Task sr="task24">
 		<cdate>1690388370272</cdate>
-		<edate>1692073245906</edate>
+		<edate>1692256724101</edate>
 		<id>24</id>
 		<nme>SubsPlease Settings</nme>
 		<pri>100</pri>
@@ -1311,361 +1241,11 @@ CR-NL.NEW.xdcc.txt
 				<Condition sr="c0" ve="3">
 					<lhs>%par1</lhs>
 					<op>2</op>
-					<rhs>batch</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>360</code>
-			<Bundle sr="arg0">
-				<Vals sr="val"/>
-			</Bundle>
-			<Str sr="arg1" ve="3">Hours Between Batch File Updates</Str>
-			<Str sr="arg2" ve="3">Batch parsing takes a while, this can speed up searching but can lead to inaccurate pack numbers</Str>
-			<Str sr="arg3" ve="3">%batch_update</Str>
-			<Int sr="arg4">
-				<var>1000</var>
-			</Int>
-			<Str sr="arg5" ve="3">2</Str>
-			<Int sr="arg6" val="0"/>
-			<Int sr="arg7" val="0"/>
-			<Str sr="arg8" ve="3"/>
-		</Action>
-		<Action sr="act10" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%file</Str>
-			<Str sr="arg1" ve="3">CR-NL.NEW.xdcc.txt</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act11" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%bot</Str>
-			<Str sr="arg1" ve="3">CR-HOLLAND|NEW</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act12" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected</lhs>
-					<op>2</op>
-					<rhs>CR-HOLLAND-IPv6|NEW</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act13" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%file</Str>
-			<Str sr="arg1" ve="3">CR-NL.IPv6.NEW.xdcc.txt</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act14" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%bot</Str>
-			<Str sr="arg1" ve="3">CR-HOLLAND-IPv6|NEW</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act15" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected</lhs>
-					<op>2</op>
-					<rhs>CR-ARUTHA|NEW</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act16" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%file</Str>
-			<Str sr="arg1" ve="3">CR-ARUTHA.NEW.xdcc.txt</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act17" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%bot</Str>
-			<Str sr="arg1" ve="3">CR-ARUTHA|NEW</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act18" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected</lhs>
-					<op>2</op>
-					<rhs>CR-ARUTHA-IPv6|NEW</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act19" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%file</Str>
-			<Str sr="arg1" ve="3">CR-ARUTHA.IPv6.NEW.xdcc.txt</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%batch_update</Str>
-			<Str sr="arg1" ve="3">%input</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act20" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%bot</Str>
-			<Str sr="arg1" ve="3">CR-ARUTHA-IPv6|NEW</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act21" ve="7">
-			<code>43</code>
-		</Action>
-		<Action sr="act22" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%file</Str>
-			<Str sr="arg1" ve="3">Gin.txt</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act23" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%bot</Str>
-			<Str sr="arg1" ve="3">Ginpachi-Sensei</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act24" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act25" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%par1</lhs>
-					<op>2</op>
-					<rhs>quality</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act26" ve="7">
-			<code>378</code>
-			<se>false</se>
-			<Bundle sr="arg0">
-				<Vals sr="val"/>
-			</Bundle>
-			<Int sr="arg1" val="0"/>
-			<Int sr="arg10" val="0"/>
-			<Int sr="arg11" val="0"/>
-			<Int sr="arg12" val="1"/>
-			<Str sr="arg13" ve="3"/>
-			<Str sr="arg2" ve="3">Select Quality</Str>
-			<Str sr="arg3" ve="3">SD,720p,1080p</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3">Cancel</Str>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Int sr="arg9">
-				<var>60</var>
-			</Int>
-		</Action>
-		<Action sr="act27" ve="7">
-			<code>137</code>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_button</lhs>
-					<op>2</op>
-					<rhs>cancel</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act28" ve="7">
-			<code>37</code>
-			<coll>true</coll>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected</lhs>
-					<op>2</op>
-					<rhs>SD</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act29" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%quality</Str>
-			<Str sr="arg1" ve="3">360p|480p|540p</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%par1</lhs>
-					<op>2</op>
-					<rhs>bot_up</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act30" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%ld_selected</lhs>
-					<op>2</op>
-					<rhs>720p</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act31" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%quality</Str>
-			<Str sr="arg1" ve="3">720p</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act32" ve="7">
-			<code>43</code>
-		</Action>
-		<Action sr="act33" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%quality</Str>
-			<Str sr="arg1" ve="3">1080p</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act34" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act35" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%par1</lhs>
-					<op>2</op>
-					<rhs>dir</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act36" ve="7">
-			<code>390</code>
-			<Bundle sr="arg0">
-				<Vals sr="val"/>
-			</Bundle>
-			<Str sr="arg1" ve="3">Directory</Str>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3">%directory</Str>
-			<Int sr="arg5" val="30"/>
-		</Action>
-		<Action sr="act37" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%directory</Str>
-			<Str sr="arg1" ve="3">%input</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%input</lhs>
-					<op>3</op>
-					<rhs>*input</rhs>
-				</Condition>
-			</ConditionList>
-		</Action>
-		<Action sr="act38" ve="7">
-			<code>38</code>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>360</code>
-			<Bundle sr="arg0">
-				<Vals sr="val"/>
-			</Bundle>
-			<Str sr="arg1" ve="3">Hours Between Bot File Updates</Str>
-			<Str sr="arg2" ve="3">Bot parsing is quick, but re-downloading before every search is a pain...</Str>
-			<Str sr="arg3" ve="3">%bot_update</Str>
-			<Int sr="arg4">
-				<var>1000</var>
-			</Int>
-			<Str sr="arg5" ve="3">2</Str>
-			<Int sr="arg6" val="0"/>
-			<Int sr="arg7" val="0"/>
-			<Str sr="arg8" ve="3"/>
-		</Action>
-		<Action sr="act5" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%bot_update</Str>
-			<Str sr="arg1" ve="3">%input</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act6" ve="7">
-			<code>43</code>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%par1</lhs>
-					<op>2</op>
 					<rhs>bot</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act7" ve="7">
+		<Action sr="act1" ve="7">
 			<code>378</code>
 			<se>false</se>
 			<Bundle sr="arg0">
@@ -1687,7 +1267,93 @@ CR-NL.NEW.xdcc.txt
 				<var>60</var>
 			</Int>
 		</Action>
-		<Action sr="act8" ve="7">
+		<Action sr="act10" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%file</Str>
+			<Str sr="arg1" ve="3">CR-ARUTHA.NEW.xdcc.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%bot</Str>
+			<Str sr="arg1" ve="3">CR-ARUTHA|NEW</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected</lhs>
+					<op>2</op>
+					<rhs>CR-ARUTHA-IPv6|NEW</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%file</Str>
+			<Str sr="arg1" ve="3">CR-ARUTHA.IPv6.NEW.xdcc.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%bot</Str>
+			<Str sr="arg1" ve="3">CR-ARUTHA-IPv6|NEW</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%file</Str>
+			<Str sr="arg1" ve="3">Gin.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%bot</Str>
+			<Str sr="arg1" ve="3">Ginpachi-Sensei</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>2</op>
+					<rhs>quality</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act2" ve="7">
 			<code>137</code>
 			<Int sr="arg0" val="0"/>
 			<Str sr="arg1" ve="3"/>
@@ -1699,9 +1365,110 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act9" ve="7">
+		<Action sr="act20" ve="7">
+			<code>378</code>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val"/>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg13" ve="3"/>
+			<Str sr="arg2" ve="3">Select Quality</Str>
+			<Str sr="arg3" ve="3">SD,720p,1080p</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3">Cancel</Str>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9">
+				<var>60</var>
+			</Int>
+		</Action>
+		<Action sr="act21" ve="7">
+			<code>137</code>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_button</lhs>
+					<op>2</op>
+					<rhs>cancel</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act22" ve="7">
 			<code>37</code>
-			<coll>true</coll>
+			<coll>false</coll>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected</lhs>
+					<op>2</op>
+					<rhs>SD</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act23" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%quality</Str>
+			<Str sr="arg1" ve="3">360p|480p|540p</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act24" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected</lhs>
+					<op>2</op>
+					<rhs>720p</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act25" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%quality</Str>
+			<Str sr="arg1" ve="3">720p</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act26" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act27" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%quality</Str>
+			<Str sr="arg1" ve="3">1080p</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act28" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act29" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%par1</lhs>
+					<op>2</op>
+					<rhs>dir</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>37</code>
+			<coll>false</coll>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%ld_selected</lhs>
@@ -1710,10 +1477,101 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
+		<Action sr="act30" ve="7">
+			<code>390</code>
+			<Bundle sr="arg0">
+				<Vals sr="val"/>
+			</Bundle>
+			<Str sr="arg1" ve="3">Directory</Str>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">%directory</Str>
+			<Int sr="arg5" val="30"/>
+		</Action>
+		<Action sr="act31" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%directory</Str>
+			<Str sr="arg1" ve="3">%input</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%input</lhs>
+					<op>3</op>
+					<rhs>*input</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act32" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%file</Str>
+			<Str sr="arg1" ve="3">CR-NL.NEW.xdcc.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%bot</Str>
+			<Str sr="arg1" ve="3">CR-HOLLAND|NEW</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected</lhs>
+					<op>2</op>
+					<rhs>CR-HOLLAND-IPv6|NEW</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%file</Str>
+			<Str sr="arg1" ve="3">CR-NL.IPv6.NEW.xdcc.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%bot</Str>
+			<Str sr="arg1" ve="3">CR-HOLLAND-IPv6|NEW</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected</lhs>
+					<op>2</op>
+					<rhs>CR-ARUTHA|NEW</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
 	</Task>
 	<Task sr="task26">
 		<cdate>1690442242655</cdate>
-		<edate>1691911489280</edate>
+		<edate>1692256759429</edate>
 		<id>26</id>
 		<nme>RSS Check - XDCC Download</nme>
 		<pri>100</pri>
@@ -2323,7 +2181,7 @@ CR-NL.NEW.xdcc.txt
 	</Task>
 	<Task sr="task33">
 		<cdate>1690391835131</cdate>
-		<edate>1692074991018</edate>
+		<edate>1692256766822</edate>
 		<id>33</id>
 		<nme>Batch Update Packlist</nme>
 		<Action sr="act0" ve="7">
@@ -2408,7 +2266,7 @@ CR-NL.NEW.xdcc.txt
 			<code>547</code>
 			<label>set to %update hours between updates to batch txt</label>
 			<Str sr="arg0" ve="3">%next_batch</Str>
-			<Str sr="arg1" ve="3">%TIMES + (%batch_update * 3600)</Str>
+			<Str sr="arg1" ve="3">%TIMES + 3600</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="1"/>
 			<Int sr="arg4" val="0"/>
@@ -2636,19 +2494,6 @@ CR-NL.NEW.xdcc.txt
 			</Int>
 			<Int sr="arg9" val="100"/>
 		</Action>
-		<ProfileVariable sr="pv0">
-			<clearout>false</clearout>
-			<exportval></exportval>
-			<immutable>false</immutable>
-			<pvci>false</pvci>
-			<pvd></pvd>
-			<pvdn></pvdn>
-			<pvid>70</pvid>
-			<pvit>t</pvit>
-			<pvn>%next_batch</pvn>
-			<pvt>t</pvt>
-			<strout>true</strout>
-		</ProfileVariable>
 	</Task>
 	<Task sr="task34">
 		<cdate>1690442242655</cdate>
@@ -2765,7 +2610,7 @@ CR-NL.NEW.xdcc.txt
 	</Task>
 	<Task sr="task35">
 		<cdate>1689315599102</cdate>
-		<edate>1692075004929</edate>
+		<edate>1692256782888</edate>
 		<id>35</id>
 		<nme>XDCC View Packlist</nme>
 		<pri>100</pri>
@@ -3232,7 +3077,7 @@ CR-NL.NEW.xdcc.txt
 	</Task>
 	<Task sr="task37">
 		<cdate>1690391914012</cdate>
-		<edate>1692074973054</edate>
+		<edate>1692255843020</edate>
 		<id>37</id>
 		<nme>Bot Update Packlist</nme>
 		<pri>100</pri>
@@ -3301,7 +3146,7 @@ CR-NL.NEW.xdcc.txt
 			<code>547</code>
 			<label>waits for half an hour before updating the bot txt</label>
 			<Str sr="arg0" ve="3">%next_bot</Str>
-			<Str sr="arg1" ve="3">%TIMES + (%bot_update * 3600)</Str>
+			<Str sr="arg1" ve="3">%TIMES + 3600</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="1"/>
 			<Int sr="arg4" val="0"/>
@@ -3521,18 +3366,5 @@ CR-NL.NEW.xdcc.txt
 				</Condition>
 			</ConditionList>
 		</Action>
-		<ProfileVariable sr="pv0">
-			<clearout>false</clearout>
-			<exportval></exportval>
-			<immutable>false</immutable>
-			<pvci>false</pvci>
-			<pvd></pvd>
-			<pvdn></pvdn>
-			<pvid>78</pvid>
-			<pvit>t</pvit>
-			<pvn>%next_bot</pvn>
-			<pvt>t</pvt>
-			<strout>true</strout>
-		</ProfileVariable>
 	</Task>
 </TaskerData>
